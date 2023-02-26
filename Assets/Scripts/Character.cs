@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,9 @@ public class Character : MonoBehaviour
 {
     public int maxHP = 1000;
     public int currentHP = 1000;
+
+    public int armor = 0;
+
     [SerializeField] StatusBar hpBar;
 
     [HideInInspector] public Level level;
@@ -24,6 +28,8 @@ public class Character : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        ApplyArmor(ref damage);
+
         currentHP -= damage;
 
         if (currentHP <= 0)
@@ -31,6 +37,12 @@ public class Character : MonoBehaviour
             Debug.Log("Character is dead GAME OVER");
         }
         hpBar.SetState(currentHP, maxHP);
+    }
+
+    private void ApplyArmor(ref int damage)
+    {
+        damage -= armor;
+        if (damage < 0) { damage = 0; }
     }
 
     public void Heal(int amount)

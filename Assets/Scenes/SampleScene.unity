@@ -4265,6 +4265,7 @@ GameObject:
   - component: {fileID: 1331511701}
   - component: {fileID: 1331511702}
   - component: {fileID: 1331511703}
+  - component: {fileID: 1331511704}
   m_Layer: 0
   m_Name: PlayerCharacter
   m_TagString: Untagged
@@ -4307,6 +4308,7 @@ Transform:
   - {fileID: 1296801658}
   - {fileID: 276962716}
   - {fileID: 1295266630}
+  - {fileID: 1570225222}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4430,6 +4432,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHP: 1000
   currentHP: 500
+  armor: 0
   hpBar: {fileID: 1295266631}
   level: {fileID: 0}
   coins: {fileID: 0}
@@ -4460,6 +4463,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cointAcquired: 0
   coinsCountText: {fileID: 874250535}
+--- !u!114 &1331511704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331511694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bd1a1888b9cd294290c471185cbb8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items: []
+  armorTest: {fileID: 11400000, guid: 6fc392c2eb606ba4abd18b5824cb1921, type: 2}
 --- !u!4 &1361932308 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4531354034059238519, guid: 9aa9163b65e5df14f88e1df0972031a2, type: 3}
@@ -4926,6 +4943,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3409463615128559709, guid: 52c9e1b0b74d08f479ff6826dad2d8f3, type: 3}
   m_PrefabInstance: {fileID: 551888283}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1570225221
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1570225222}
+  - component: {fileID: 1570225223}
+  m_Layer: 0
+  m_Name: wpn_ThrowingFlag
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1570225222
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570225221}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1331511696}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1570225223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570225221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53f807a46ba33c047b8c228675f64e27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToAttack: 1.5
+  knifePrefab: {fileID: 3370109486200194161, guid: 7eb751933eec30b4cacd61b1da3e7082, type: 3}
 --- !u!1001 &1579116583
 PrefabInstance:
   m_ObjectHideFlags: 0
