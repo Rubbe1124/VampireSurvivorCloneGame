@@ -16,7 +16,7 @@ public class DropOnDestroy : MonoBehaviour
     }
 
 
-    private void OnDestroy()
+    public void CheckDrop()
     {
         if (isQuitting)
         {
