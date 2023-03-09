@@ -3,11 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ThrowingDaggerWeapon : MonoBehaviour
+public class ThrowingDaggerWeapon : WeaponBase
 {
-    [SerializeField] float timeToAttack;
-    float timer;
-
     PlayerMove playerMove;
 
     [SerializeField] GameObject knifePrefab;
@@ -17,19 +14,7 @@ public class ThrowingDaggerWeapon : MonoBehaviour
         playerMove = GetComponentInParent<PlayerMove>();
     }
 
-    private void Update()
-    {
-        if(timer<timeToAttack)
-        {
-            timer += Time.deltaTime;
-            return;
-        }
-
-        timer = 0;
-        SpawnKnife();
-    }
-
-    private void SpawnKnife()
+    public override void Attack()
     {
         GameObject thrownKnife = Instantiate(knifePrefab);
         thrownKnife.transform.position = transform.position;
