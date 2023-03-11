@@ -15,4 +15,7 @@ MonoBehaviour:
   upgradeType: 0
   Name: Blunt Throwing Knfie
   icon: {fileID: 21300000, guid: 0e1bdc420651707458daf7078559d23b, type: 3}
-  weaponData: {fileID: 0}
+  weaponData: {fileID: 11400000, guid: 5450118de21885d4ea66ce3311fcc5b2, type: 2}
+  weaponUpgradeStats:
+    damage: 100
+    timeToAttack: 0

@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ThrowingDaggerProjectile : MonoBehaviour
+public class ThrowingKnifeProjectile : MonoBehaviour
 {
     Vector3 direction;
     [SerializeField] float speed;
-    [SerializeField] int damage = 5;
+    public int damage = 5;
+
+    float ttl = 6f;
 
     public void SetDirection(float dir_x,float dir_y)
     {
@@ -48,6 +50,12 @@ public class ThrowingDaggerProjectile : MonoBehaviour
                 Destroy(gameObject);
 
             }
+        }
+
+        ttl -= Time.deltaTime;
+        if (ttl < 0f)
+        {
+            Destroy(gameObject);
         }
     }
 }
