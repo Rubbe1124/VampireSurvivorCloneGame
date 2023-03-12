@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 927433b6b8ff47747abe5766066247de, type: 3}
-  m_Name: Armor
+  m_Script: {fileID: 11500000, guid: 7b1494b48af318c4bb4e6a8a5d317dc9, type: 3}
+  m_Name: Bat EnemyData
   m_EditorClassIdentifier: 
-  Name: Armor
-  armor: 10
+  Name: Bat
+  animatedPrefab: {fileID: 7575859338884468657, guid: 82ea5a0904c72554f840d8ac30066b0b, type: 3}

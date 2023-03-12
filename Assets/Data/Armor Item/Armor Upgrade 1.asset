@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bda9fd1050fd5e84894c28f68418f744, type: 3}
+  m_Name: Armor Upgrade 1
+  m_EditorClassIdentifier: 
+  upgradeType: 1
+  Name: Armor Upgrade
+  icon: {fileID: 21300000, guid: 891203cb85a6d184f90c656fb0597d66, type: 3}
+  weaponData: {fileID: 0}
+  weaponUpgradeStats:
+    damage: 0
+    timeToAttack: 0
+    numberOfAttacks: 0
+  item: {fileID: 11400000, guid: 69fc58a42da303445b476471682fe961, type: 2}
+  itemStats:
+    armor: 25

@@ -15,26 +15,22 @@ public class EnemiesManager : MonoBehaviour
         player = GameManager.instance.playerTransform.gameObject;
     }
 
-/*    private void Update()
-    {
-        timer -= Time.deltaTime;
-        if (timer < 0f)
-        {
-            SpawnEnemy();
-            timer = spawnTimer;
-        }
-    }*/
-
-    public void SpawnEnemy()
+    public void SpawnEnemy(EnemyData enemyToSpawn)
     {
         Vector3 position = GenerateRandomPosition();
 
         position += player.transform.position;
 
+        //spawning main enemy object
         GameObject newEnemy = Instantiate(enemy);
         newEnemy.transform.position = position;
         newEnemy.GetComponent<Enemy>().SetTarget(player);
         newEnemy.transform.parent = transform;
+
+        //spawning sprite object of the enemy
+        GameObject spriteObject = Instantiate(enemyToSpawn.animatedPrefab);
+        spriteObject.transform.parent = newEnemy.transform;
+        spriteObject.transform.localPosition = Vector3.zero;
     }
 
     private Vector3 GenerateRandomPosition()
